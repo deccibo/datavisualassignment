@@ -36,14 +36,14 @@ st.write("## Your additions")
 category_selected = st.selectbox("Select a Category", interactive_df["Category"].unique())
 
 # (2) Sub-Category multi-select (filtered by selected Category)
-filtered_subcats = interactive_df[interactive_df["Category"] == category_selected]["Sub-Category"].unique()
+filtered_subcats = interactive_df[interactive_df["Category"] == category_selected]["Sub_Category"].unique()
 subcats_selected = st.multiselect("Select Sub-Category", filtered_subcats)
 
 # (3) Line chart of sales for selected Sub-Categories
 if subcats_selected:
     filtered_df = interactive_df[
         (interactive_df["Category"] == category_selected) &
-        (interactive_df["Sub-Category"].isin(subcats_selected))
+        (interactive_df["Sub_Category"].isin(subcats_selected))
     ]
 
     sales_trend = (
