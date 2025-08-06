@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.title("Data App Assignment, on July 14th")
+st.title("Data App Assignment, Declan O'Halloran)
 
 # Load the data
 df = pd.read_csv("Superstore_Sales_utf8.csv", parse_dates=True)
